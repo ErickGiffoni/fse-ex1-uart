@@ -84,3 +84,6 @@ int res = read(fid, &siX16, sizeof(short) );
 ## 4 - OBSERVAÇÕES
 
 O código pode ser testado no Linux, porém terá que ser compilado para rodar no Raspberry Pi em sala de aula.
+
+O código base em C para o uso da UART no Raspberry Pi se encontra em: 
+[Código UART](https://gitlab.com/fse_fga/uart_raspberry_pi)
