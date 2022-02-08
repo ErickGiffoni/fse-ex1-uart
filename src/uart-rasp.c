@@ -13,6 +13,7 @@
 #include <fcntl.h>      // open
 #include <termios.h>    // tcgetattr, struct termios...
 #include <stdlib.h>     // malloc
+#include <unistd.h>     // write
 #include <string.h>     // strncpy
 #include <stdio.h>
 
@@ -37,7 +38,7 @@ int main(){
 } // end of main
 
 void openUart(int *descriptor, char *path){
-   descriptor = open(path, O_RDWR | O_NOCTTY | O_NDELAY);
+   *descriptor = open(path, O_RDWR | O_NOCTTY | O_NDELAY);
 
    if(*descriptor == -1){
       printf("Error openning UART");
@@ -68,7 +69,7 @@ void sendString(char *message, int msgLength, int *descriptor){
    package[0]  =  SEND_STRING_CODE;
    package[1]  =  msgLength;
 
-   strncpy(&package+2, message, msgLength);
+   strncpy(package+2, message, msgLength);
 
    package[pkgLength-4] =  1;
    package[pkgLength-3] =  1;
