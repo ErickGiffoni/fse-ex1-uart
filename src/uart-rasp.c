@@ -48,6 +48,9 @@ void openUart(int *descriptor, char *path){
    return;
 } // end of openUart
 
+/**
+ * Access UART hardware and sets its configurations
+ */
 void setCommunicationOptions(struct termios *commOptions, int *descriptor){
    tcgetattr(*descriptor, commOptions);
 
