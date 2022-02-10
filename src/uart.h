@@ -13,6 +13,8 @@
 #ifndef  UART_H
 #define  UART_H
 
+#include <termios.h>    // tcgetattr, struct termios...
+
 #define SEND_STRING_CODE   0xB3
 
 void openUart(char *path);
