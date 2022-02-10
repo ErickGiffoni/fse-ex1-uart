@@ -13,10 +13,10 @@
 #include "uart.h"
 
 #include <fcntl.h>      // open
-#include <termios.h>    // tcgetattr, struct termios...
 #include <stdlib.h>     // malloc
 #include <unistd.h>     // write
 #include <string.h>     // strncpy
+#include <stdio.h>
 
 static int uartDescriptor = -1;
 
