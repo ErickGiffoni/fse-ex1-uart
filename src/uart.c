@@ -6,6 +6,9 @@
  * @version 0.1
  * @date 2022-02-10
  * 
+ * Ref 1          : https://gitlab.com/fse_fga/exercicios/exercicio-1-uart
+ * Ref 2 (MODBUS) : https://gitlab.com/fse_fga/exercicios/exercicio-2-uart-modbus
+ * 
  * @copyright Copyright (c) 2022
  * 
  */

@@ -11,6 +11,8 @@
  */
 
 #include <termios.h>    // struct termios
+#include <stdio.h>      // printf, scanf
+#include <stdlib.h>     // calloc
 #include "uart.h"
 
 int main(){
@@ -20,7 +22,10 @@ int main(){
    struct termios commOptions;
    setCommunicationOptions(&commOptions);
 
-   sendString("Eu sou eu", 9);
+   char *message = (char *) calloc(255, sizeof(char));
+   int read_bytes = scanf(" %s", message);
+
+   sendString(message, read_bytes);
 
    return 0;
 } // end of main
